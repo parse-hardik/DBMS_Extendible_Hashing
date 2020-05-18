@@ -42,13 +42,17 @@ public class Phases extends javax.swing.JFrame {
     
     public int binary(int num)
     {
+        if(num==0)
+        {
+            return 0;
+        }
         if(num==1)
         {
             return 1;
         }
-        int binary = binary(num/2);
+        int bin = binary(num/2);
         num = num%2;
-        return binary*10 + num;
+        return bin*10 + num;
     }
     
     public int num(int binary)
